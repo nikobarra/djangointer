@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block content %}
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Django Task App</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            numquam tempore reiciendis. Consequatur facere vitae officiis,
+            fugiat omnis maiores nesciunt iusto in sed hic perspiciatis
+            temporibus pariatur at, aliquid nostrum? Provident libero architecto
+            officia quas repellendus numquam et inventore sint unde omnis
+            blanditiis, nulla laborum, nisi quod magni aperiam eos fugiat
+            dolorum non qui molestiae corporis. Sunt deleniti exercitationem
+            quae! Ipsam, doloremque excepturi? Sequi minima eius exercitationem
+            accusantium nulla harum porro obcaecati suscipit expedita repellat
+            aliquid eos neque sit vero, perspiciatis quas, molestias temporibus
+            corrupti aspernatur explicabo libero illum ullam? Aliquid nam
+            blanditiis dignissimos assumenda corporis ut impedit quae cum
+            laborum quas earum quasi vero laudantium dicta, amet expedita,
+            doloremque perferendis explicabo, deleniti quam odit commodi veniam
+            delectus sunt. Nemo. Beatae necessitatibus nam maiores vero maxime
+            sed, quisquam modi dolore. Eos tempora beatae veniam? Optio modi
+            dolores impedit consectetur asperiores ad voluptate. Reprehenderit
+            corporis minus facilis facere ullam quaerat aperiam. Ab ratione
+            magni debitis maiores voluptatem? Facilis reiciendis odio
+            necessitatibus ad? Tenetur, quia repellendus? Blanditiis, minus.
+            Nostrum culpa fugit repellendus porro qui illo voluptatum mollitia
+            corrupti pariatur, eaque, hic ratione? Amet quis nam, atque laborum
+            delectus, culpa ducimus facilis pariatur assumenda earum ea quo eos
+            expedita modi vel et quam similique quos velit repudiandae? Unde
+            aliquam odio officia. Excepturi, veritatis. Sapiente reiciendis
+            suscipit ullam omnis totam dolore vel velit maiores quaerat aperiam
+            in harum obcaecati, fugiat nulla natus porro dicta doloribus vero,
+            voluptate nemo consectetur similique saepe quas fugit? Suscipit.
+            Harum explicabo sint consequatur veritatis facere sit dolorum
+            aperiam, cupiditate nisi rerum eveniet beatae ut eum mollitia, neque
+            amet recusandae, ratione ab! Quos sint labore doloribus voluptas
+            nostrum delectus dolor. Facere dignissimos deleniti quis reiciendis
+            facilis in quibusdam itaque sunt dicta provident asperiores saepe
+            quia esse placeat, quaerat repudiandae eum debitis distinctio
+            numquam. Iure voluptates excepturi nostrum ipsum expedita
+            perferendis!
+        </p>
+        <div class="text-center">
+            {% if not user.is_authenticated %}
+            <a class="btn btn-secondary" href="{% url 'signup' %}">Signup</a>
+            <a class="btn btn-dark" href="{% url 'signin' %}">Login</a>
+            {% endif %}
+        </div>
+    </section>
+</main>
+{% endblock%}

@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="text-center display-3 py-5">Lista de Tareas</h1>
+
+            <ul class="list-group">
+                {% for task in tasks %}
+
+                <a
+                    class="list-group-item"
+                    href="{% url 'task_detail' task.id %}"
+                >
+                    <header class="d-flex justify-content-between">
+                        {% if task.important %}
+                        <h1 class="fw-bold text-success">{{ task.title }}</h1>
+                        <p>Creada por: {{ task.user.username }}</p>
+
+                        {% else %}
+                        <h1 class="fw-bold">{{ task.title }}</h1>
+                        {% endif %}
+                    </header>
+                    <p>Descripcion: {{ task.description }}</p>
+                    {% if task.date_completed %}
+                    <p>Fecha de completado: {{ task.date_completed }}</p>
+                    {% else %}
+                    <p>Tarea sin completar</p>
+                    {% endif %}
+                </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</main>
+{% endblock%}
